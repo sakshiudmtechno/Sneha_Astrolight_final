@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -10,10 +12,13 @@ import certNumerologyFoundation from "@/assets/cert-numerology-foundation.jpeg";
 import certHumkara from "@/assets/cert-humkara.jpeg";
 import certVastu from "@/assets/cert-vastu.jpeg";
 import certPredictive from "@/assets/cert-predictive.jpeg";
-import { useState } from "react";
-import { X } from "lucide-react";
+import certi1 from "@/assets/certi1.jpeg";
+import certi2 from "@/assets/certi2.png";
+
 
 const certs = [
+  { img: certi1, title: "Money Reiki" },
+  { img: certi2, title: "Astro Numerology" },
   { img: certNumerology, title: "Diploma in Numerology Research" },
   { img: certPredictive, title: "Advance Predictive Course in Numerology" },
   { img: certTarot, title: "Masters Course in Tarot Card Reading" },
@@ -64,7 +69,7 @@ const CertificationsPage = () => {
                 onClick={() => setSelected(i)}
                 className="group relative rounded-xl overflow-hidden border border-primary/15 cursor-pointer"
               >
-                <img src={cert.img} alt={cert.title} className="w-full aspect-[4/3] object-cover" loading="lazy" />
+                <img src={cert.img} alt={cert.title} className="w-full aspect-[4/3] " loading="lazy" />
                 <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-3">
                   <p className="text-center text-sm font-sans-clean text-primary font-medium">{cert.title}</p>
                 </div>
